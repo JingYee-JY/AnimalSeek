@@ -1,0 +1,114 @@
+.number{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.text{
+    font-size: 20px;
+}
+
+.image{
+    margin-top: 5px;
+    width: 30%;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.barn{
+    position: relative;
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-image: url("./img/barn.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.windowTop,.windowRight,.windowLeft{
+    position: absolute;
+    height: 90px;
+    width: 90px;
+}
+
+.windowTop{
+    top: 60px;
+    left: 110px;
+}
+
+.windowRight{
+    top: 130px;
+    left: 40px;
+}
+
+.windowLeft{
+    top: 130px;
+    right: 80px;
+}
+
+.door{
+    position: absolute;
+    height: 130px;
+    width: 150px;
+    bottom: 5px;
+}
+.active{
+    opacity: 80%;
+}
+.hide{
+    display: none;
+    visibility: hidden;
+}
+.popUp{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    gap: 5vh;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    top: 0;
+    background-color: transparent;
+}
+
+.pop{
+    background-color: #FFB7B7;
+    padding: 20px;
+    position: relative;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.information{
+    text-align: center;
+}
+
+.information p{
+    font-size: 30px;
+}
+
+.information img{
+    width: 50%;
+}
+
+.emoji{
+    margin-top: 50px;
+    width: 50%;
+}
+
+.encouragment{
+    font-size: 35px;
+    padding: 0% 2.5%;
+    margin: 10px;
+}
