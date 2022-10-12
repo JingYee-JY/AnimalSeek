@@ -112,3 +112,36 @@
     padding: 0% 2.5%;
     margin: 10px;
 }
+
+/*ipad*/
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    .barn{
+        height: 650px;
+        width: 650px;
+    }
+    .windowTop,.windowRight,.windowLeft{
+        height: 200px;
+        width: 200px;
+    }
+    .windowTop{
+        top: 100px;
+        left: 185px;
+    }
+    
+    .windowRight{
+        top: 250px;
+        left: 40px;
+    }
+    
+    .windowLeft{
+        top: 250px;
+        right: 120px;
+    }
+    
+    .door{
+        position: absolute;
+        height: 230px;
+        width: 280px;
+        bottom: 10px;
+    }
+}
