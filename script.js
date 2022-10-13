@@ -33,7 +33,7 @@ let animal = [
 startButton.addEventListener("click", () => {
     playClickSound()
     current = 0
-    totalQuestion = 0;
+    totalQuestion = Math.floor(Math.random() * 5) + 5;
     let delay = setTimeout(() => {
         start.classList.add("hide")
         game.classList.remove("hide")
