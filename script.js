@@ -1,9 +1,14 @@
+const startButton = document.querySelector(".startButton")
 const questionNumber = document.querySelector(".number")
 const text = document.querySelector(".text")
 const image = document.querySelector(".image")
 const popUp = document.querySelector(".popUp")
+const start = document.querySelector(".start")
 const game = document.querySelector(".game")
 const final = document.querySelector(".final")
+const againButton = document.querySelector(".againButton")
+const homeButton = document.querySelector(".homeButton")
+const clickSound = document.getElementById("click")
 
 let totalQuestion;
 let current;
@@ -25,18 +30,39 @@ let animal = [
     {name: "Cow", image:"./img/cowInBarn.png", help:"./img/cow.png"}
 ]
 
-Start()
-Question()
-
-function Start(){
+startButton.addEventListener("click", () => {
+    playClickSound()
     current = 0
-    totalQuestion = Math.floor(Math.random() * 5) + 5;
+    totalQuestion = 0;
+    let delay = setTimeout(() => {
+        start.classList.add("hide")
+        game.classList.remove("hide")
+        Question()
+      }, 200);
+})
+
+againButton.addEventListener("click", () => {
+    playClickSound()
+    let delay = setTimeout(() => {
+        final.classList.add("hide")
+        start.classList.remove("hide")
+      }, 200);
+})
+
+homeButton.addEventListener("click", () => {
+    playClickSound()
+    let delay = setTimeout(() => {
+        location.assign('https://gimme.sg/activations/dementia/');
+      }, 200);
+})
+
     for(let x = 1; x < 5; x ++){
         let selectedClass = "btn" + x
         let selectedBtn = document.querySelector(`.${selectedClass}`)
         
         selectedBtn.addEventListener("click", () => {
             if(play == false){
+                playClickSound()
                 let data = selectedBtn.getAttribute("data")
                 if(data == answer.name){
                     console.log("S")
@@ -57,6 +83,11 @@ function Start(){
             }
         })
     }
+
+function playClickSound(){
+    console.log(clickSound)
+    clickSound.currentTime = 0
+    clickSound.play()
 }
 
 function Question(){
